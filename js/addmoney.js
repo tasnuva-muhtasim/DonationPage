@@ -2,7 +2,9 @@ document.getElementById('btn-add-money')
 .addEventListener('click',function(event){
     event.preventDefault();
     const addMoney=getInputFieldValueById('input-add-money');
-    if(isNaN(addMoney) || addMoney<=0){
+    const mainBalance= getTextFieldValueById('main-amount');
+
+    if(isNaN(addMoney) || addMoney<=0 || mainBalance<addMoney){
         alert('Failed to add money');
         return;
     }
@@ -15,7 +17,6 @@ document.getElementById('btn-add-money')
 document.getElementById('amount-noakhali').innerText = newBalance;
 
 
-const mainBalance= getTextFieldValueById('main-amount');
 const newMainBalance= mainBalance-addMoney;
 document.getElementById('main-amount').innerText = newMainBalance;
 
@@ -28,7 +29,9 @@ document.getElementById('btn-feni-add-money')
 .addEventListener('click',function(event){
     event.preventDefault();
     const addMoney=getInputFieldValueById('input-feni-add-money');
-    if(isNaN(addMoney) || addMoney<=0){
+    const mainBalance= getTextFieldValueById('main-amount');
+
+    if(isNaN(addMoney) || addMoney<=0 || mainBalance<addMoney){
         alert('Failed to add money');
         return;
     }
@@ -41,7 +44,6 @@ document.getElementById('btn-feni-add-money')
 document.getElementById('amount-feni').innerText = newBalance;
 
 
-const mainBalance= getTextFieldValueById('main-amount');
 const newMainBalance= mainBalance-addMoney;
 document.getElementById('main-amount').innerText = newMainBalance;
 
@@ -53,7 +55,9 @@ document.getElementById('btn-quota-add-money')
 .addEventListener('click',function(event){
     event.preventDefault();
     const addMoney=getInputFieldValueById('input-quota-add-money');
-    if(isNaN(addMoney) || addMoney<=0){
+    const mainBalance= getTextFieldValueById('main-amount');
+
+    if(isNaN(addMoney) || addMoney<=0 || mainBalance<addMoney){
         alert('Failed to add money');
         return;
     }
@@ -66,7 +70,6 @@ document.getElementById('btn-quota-add-money')
 document.getElementById('amount-quota').innerText = newBalance;
 
 
-const mainBalance= getTextFieldValueById('main-amount');
 const newMainBalance= mainBalance-addMoney;
 document.getElementById('main-amount').innerText = newMainBalance;
 
