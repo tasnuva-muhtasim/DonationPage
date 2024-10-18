@@ -1,7 +1,17 @@
-document.getElementById(id).addEventListener('click',function(event){
-event.preventDefault();
-const  addmoney = document.getElementById(id).value;
-const addMoneyNumber = parseFloat(addmoney);
-return addMoneyNumber;
 
-});
+
+
+function getInputFieldValueById(id)
+{
+    
+        const  inputValue = document.getElementById(id).value;
+         const inputNumber = parseFloat(inputValue);
+        return inputNumber;
+        
+}
+
+function getTextFieldValueById(id){
+    const textValue = document.getElementById(id).innerText;
+    const textNumber = parseFloat(textValue);
+    return textNumber;
+}
